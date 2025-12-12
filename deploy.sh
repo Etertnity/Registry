@@ -37,7 +37,7 @@ DATABASE_URL=sqlite:///./data/clinic.db
 
 # API Configuration
 API_HOST=0.0.0.0
-API_PORT=8000
+API_PORT=28080
 
 # Frontend Configuration
 REACT_APP_API_URL=http://$(curl -s ifconfig.me):8000
@@ -60,13 +60,13 @@ sleep 30
 
 # Check service health
 echo "🔍 Checking service health..."
-if curl -f http://localhost:8000/ > /dev/null 2>&1; then
+if curl -f http://localhost:28080/ > /dev/null 2>&1; then
     echo "✅ Backend is healthy"
 else
     echo "❌ Backend health check failed"
 fi
 
-if curl -f http://localhost:3000/ > /dev/null 2>&1; then
+if curl -f http://localhost:3002/ > /dev/null 2>&1; then
     echo "✅ Frontend is healthy"
 else
     echo "❌ Frontend health check failed"
@@ -113,9 +113,9 @@ docker-compose ps
 
 echo ""
 echo "🎉 Deployment completed!"
-echo "📱 Frontend: http://$(curl -s ifconfig.me):3000"
-echo "🔧 Backend API: http://$(curl -s ifconfig.me):8000"
-echo "📚 API Docs: http://$(curl -s ifconfig.me):8000/docs"
+echo "📱 Frontend: http://$(curl -s ifconfig.me):3002"
+echo "🔧 Backend API: http://$(curl -s ifconfig.me):28080"
+echo "📚 API Docs: http://$(curl -s ifconfig.me):28080/docs"
 echo ""
 echo "📝 To manage the application:"
 echo "   Start: docker-compose up -d"

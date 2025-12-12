@@ -68,7 +68,7 @@
    python main.py
    ```
 
-Backend будет доступен по адресу: http://localhost:8000
+Backend будет доступен по адресу: http://localhost:28080
 
 #### Запуск Frontend
 
@@ -117,9 +117,9 @@ Frontend будет доступен по адресу: http://localhost:3000
    ```
 
 Приложение будет доступно:
-- Frontend: http://localhost:3000
-- Backend: http://localhost:8000
-- API Docs: http://localhost:8000/docs
+- Frontend: http://localhost:3002
+- Backend: http://localhost:28080
+- API Docs: http://localhost:28080/docs
 
 ## 🔧 Управление приложением
 
@@ -237,8 +237,8 @@ pause
 cd /d "%~dp0"
 docker-compose up -d --build
 echo Приложение запущено!
-echo Frontend: http://localhost:3000
-echo Backend: http://localhost:8000
+echo Frontend: http://localhost:3002
+echo Backend: http://localhost:28080
 pause
 ```
 

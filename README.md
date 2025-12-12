@@ -92,8 +92,8 @@ pip install -r requirements.txt
 python -m uvicorn main:app --reload
 ```
 
-Backend будет доступен по адресу: http://localhost:8000
-API документация: http://localhost:8000/docs
+Backend будет доступен по адресу: http://localhost:28080
+API документация: http://localhost:28080/docs
 
 #### Frontend
 
@@ -139,7 +139,7 @@ docker-compose up -d --build
 
 Приложение будет доступно:
 - Frontend: http://localhost:3000
-- Backend: http://localhost:8000
+- Backend: http://localhost:28080
 - Nginx: http://localhost:80
 
 ### Деплой на Ubuntu VPS

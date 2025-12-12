@@ -19,8 +19,8 @@ pip install -r requirements.txt
 REM Запускаем сервер
 echo ✅ Запуск сервера...
 echo.
-echo Backend будет доступен по адресу: http://localhost:8000
-echo API документация: http://localhost:8000/docs
+echo Backend будет доступен по адресу: http://localhost:28080
+echo API документация: http://localhost:28080/docs
 echo.
 echo Нажмите Ctrl+C для остановки сервера
 echo.

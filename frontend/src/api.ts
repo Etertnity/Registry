@@ -16,7 +16,7 @@ import {
   DashboardSummary,
 } from './types.ts';
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'http://localhost:28080';
 
 const api = axios.create({
   baseURL: API_BASE_URL,

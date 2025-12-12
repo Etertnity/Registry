@@ -143,7 +143,7 @@ SERVER_IP=${SERVER_IP}
 DOMAIN=${DOMAIN:-${SERVER_IP}}
 
 # API Configuration
-REACT_APP_API_URL=http://${SERVER_IP}:8000
+REACT_APP_API_URL=http://${SERVER_IP}:28080
 
 # Database Configuration
 DATABASE_URL=sqlite:///./data/clinic.db
@@ -196,7 +196,7 @@ setup_firewall() {
         sudo ufw allow 443/tcp
         
         # Allow specific application ports if needed
-        # sudo ufw allow 8000/tcp  # Backend API (if exposing directly)
+        # sudo ufw allow 28080/tcp  # Backend API (if exposing directly)
         
         # Enable firewall
         sudo ufw --force enable
@@ -233,7 +233,7 @@ deploy_application() {
     # Check service health
     log "Checking service health..."
     
-    if curl -f http://localhost:8000/health > /dev/null 2>&1; then
+    if curl -f http://localhost:28080/health > /dev/null 2>&1; then
         log "✅ Backend is healthy"
     else
         error "❌ Backend health check failed"
@@ -328,8 +328,8 @@ show_status() {
     echo ""
     echo "🌐 Access URLs:"
     echo "   Frontend:     http://${SERVER_IP}"
-    echo "   Backend API:  http://${SERVER_IP}:8000"
-    echo "   API Docs:     http://${SERVER_IP}:8000/docs"
+    echo "   Backend API:  http://${SERVER_IP}:28080"
+    echo "   API Docs:     http://${SERVER_IP}:28080/docs"
     echo "   Health Check: http://${SERVER_IP}/health"
     echo ""
     echo "🔧 Management Commands:"
