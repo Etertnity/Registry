@@ -3,7 +3,7 @@ services:
     build: 
       context: ./backend
       dockerfile: Dockerfile
-    container_name: shift_management_backend
+    container_name: registry_backend
     ports:
       - "28080:8000"
     environment:
@@ -22,7 +22,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: shift_management_frontend
+    container_name: registry_frontend
     ports:
       - "3002:80"
     depends_on:
@@ -36,7 +36,7 @@ services:
 
   nginx:
     image: nginx:alpine
-    container_name: shift_management_nginx
+    container_name: registry_nginx
     ports:
       - "9080:80"
       - "9443:443"

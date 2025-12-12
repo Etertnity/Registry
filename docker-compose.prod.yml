@@ -3,7 +3,7 @@ services:
     build: 
       context: ./backend
       dockerfile: Dockerfile
-    container_name: shift_management_backend
+    container_name: registry_backend
     ports:
       - "28080:8000"
     environment:
@@ -29,7 +29,7 @@ services:
       dockerfile: Dockerfile
       args:
         - REACT_APP_API_URL=${REACT_APP_API_URL}
-    container_name: shift_management_frontend
+    container_name: registry_frontend
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost/"]
@@ -42,7 +42,7 @@ services:
 
   nginx:
     image: nginx:alpine
-    container_name: shift_management_nginx
+    container_name: registry_nginx
     ports:
       - "9080:80"
       - "9443:443"
